@@ -1,6 +1,6 @@
 h1. Grails Backbone Plugin
 
-A simple resource plugin to get started with backbone.js in your Grails project. For more information on backbone, please see: "backbone":http://documentcloud.github.com/backbone/ and "underscore"":http://documentcloud.github.com/underscore/
+A simple resource plugin to get started with backbone.js in your Grails project. For more information on backbone, please see: "backbone":http://documentcloud.github.com/backbone/ and "underscore":http://documentcloud.github.com/underscore/
 
 h2. Installation
 

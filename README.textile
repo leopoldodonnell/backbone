@@ -1,0 +1,27 @@
+h1. Grails Backbone Plugin
+
+A simple resource plugin to get started with backbone.js in your Grails project. For more information on backbone, please see: "backbone":http://documentcloud.github.com/backbone/ and "underscore"":http://documentcloud.github.com/underscore/
+
+h2. Installation
+
+Due to an issue with the (at the time of writing) grails 2.0.0.RC1 release, the _yui-minifiy-resources_ plugin dependency isn't resolved correctly "see":http://grails.1312388.n4.nabble.com/FAO-Plugin-Authors-required-changes-for-Grails-2-0-td3927936.html
+
+*To Install:*
+
+bc.. > cd {your_project_root}
+> grails install-plugin yui-minify-resouces
+> grails install-plugin backbone
+
+h2. Using Backbone in your project
+
+This plugin uses grails resources. To include the necessary backbone resources, add the following to your page headers (or to your layouts if that is more appropriate).
+
+bc.. <r:require modules='backbone'/>
+
+p. This plugin also makes use of the 'yui-minify-resources':http://www.grails.org/plugin/yui-minify-resources plugin. For ease of debug, the plugin uses the un-minified, and un-compressed libraries for *backbone* and *underscrore* and configures *yui-minify-resources* to minifiy during production. If you'd like to change this, simply set the following in the appropriate environment section of your _Config.groovy_ file.
+
+bc.. //Completely enable css and/or js processor for development
+grails.resources.mappers.yuicssminify.disable=false
+grails.resources.mappers.yuijsminify.disable=false
+
+p. Write and organize your backbone related source as you see fit. In the future this plugin may offer conventional framework for backbone source organization.
